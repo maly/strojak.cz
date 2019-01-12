@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{% for post in site.posts limit:10 %}
+<div class="post">
+	<h2><a href=".{{post.url}}" rel="bookmark" title="{{post.title}}">{{post.title}}</a></h2>
+
+	<div class="entry">
+		{{post.description}}
+		{{post.content}}
+	</div>
+	<p class="postmetadata">
+		<a href="{{post.id}}/" title="Read more {{page.title}}">
+			Read more</a>
+	</p>
+</div>
+{% endfor %}
